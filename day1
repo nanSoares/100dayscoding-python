@@ -1,0 +1,33 @@
+#COMO MOSTRAR ALGO NA TELA COM O PRINT
+
+name = input("What's your name? ")
+month = input("What month are we in? ")
+day = input("Today is? ")
+year = input("The current year: ")
+
+
+print(f'''
+  {name}
+  {month} {day}th {year}
+  Eu estou entrando no desafio do replit de 100 dias em python!
+  Vou passar ao menos 10 minutos do meu dia codando
+  Vou fazer isso usando o replit, um IDE incrível que pode ser utilizado pelo 
+  navegador até mesmo do 
+  telefone, de qualquer lugar, sem desculpas para      
+  não aprender a codar
+  Estou muito 😋
+  Você pode acompanhar o meu progresso em: 
+  replit.com/@RenanSoares5
+  ''')
+  
+  
+  *Considerações Finais : há varias maneiras de mostrar na tela algo, basta identificar qual a sua necessidade, 
+  podemos deixar tudo em "String"
+  podemos concatenar "String" + Varíavel + "Outra String";
+  podemos deixar utilizar 3 aspas no início e final do texto para printar na tela da mesma maneira e espaços que deixamos '''texto a
+                                                                                                                             texto b '''
+  podemos utilizar o f antes das aspas para passar variáveis entre chaves no meio do texto: f"String um {variável1} continuo escrevendo... {variável2}"
+  
+  
+  
+  
