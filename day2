@@ -1,0 +1,19 @@
+#Variáveis
+
+
+meuNome = input('Digite seu nome: ')
+minhaIdade = int(input('Digite sua idade: '))
+
+print()
+print(f'Você tem {minhaIdade} anos, e se chama {meuNome}')
+
+name = input('Seu nome? ')
+food = input('Favorite food? ')
+music = input('Favorite music? ')
+country = input('Your country? ')
+
+print(f'Você é {name}, sua comida favorita é {food}, a música é {music}, e mora no(em) {country}.')
+
+
+Considerações Finais: A variável deve iniciar com letra minúscula por conta de boa prática, podendo utilizar a tecnica de camelCase. Existem palavras que são exclusivas 
+do python e não podem ser utilizadas como variáveis, pois possuem funções específicas como o "for" por exemplo.
