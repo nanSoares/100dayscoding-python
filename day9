@@ -1,0 +1,22 @@
+#Sinais de comparação, tipo de dados
+#Int = numeros inteiros, Float = Numeros com casas decimais
+
+print(5==5)
+print(3!=5)
+print(5>3)
+print(5>=3)
+print(3<5)
+print(3<=5)
+
+year = int(input("What year were you born? "))
+
+if year >= 1925 and year <= 1946:
+  print("You are from the Traditionalists generation")
+elif year >= 1947 and year <= 1964:
+  print("You are from the Baby Boomers generation")
+elif year >= 1965 and year <= 1981:
+  print("You are from the Generation X")
+elif year >= 1982 and year <= 1995:
+  print("You are from the Millenials generation")
+elif year >= 1996 and year <= 2015:
+  print("You are from the Generation Z")
