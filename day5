@@ -1,0 +1,33 @@
+#Utilização do IF
+
+#Exemplo 1
+myName = input("What's your name?: ")
+if myName == "Renan":
+  print("Hello men!")
+else:
+  print("Who on earth are you?!")
+
+
+#Exemplo 2
+catsOrDogs = input("Are you a cat person? Or a dog person?: ")
+if catsOrDogs == "cat":
+  print("Meow")
+else: 
+ if catsOrDogs == "dog":
+   print("Woof")
+ else:
+   print("Invalid information")
+
+
+#Exemplo 3
+print("Initializing the world of persons...")
+person1, person2 = "torkian", "feldys"
+character = input(str("Wich character are you? - "))
+
+if character == person1 or character== person2:
+  print("Now, you are the best person of earth")
+else:
+  print("WHO ON EARTH ARE YOU?")
+  
+
+Considerações Finais: o IF é como uma pergunta, gerando um verdadeiro ou falso, se a condição atender ele segue o fluxo conforme o True ou False, "IF" ou "ELSE".
