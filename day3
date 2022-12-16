@@ -1,0 +1,13 @@
+#Concatenando Variáveis com Strings
+
+
+food = input('Give me a type of food - ')
+plant = input('Give me a type of plant - ')
+method = input('Give me a method of cooking - ')
+word = input('Give me a word of burned food - ')
+household = input('Give me a household item - ')
+
+print(method, food, "with", word, plant, "on a bed of", household)
+
+
+Considerações Finais: Essa é uma das formas de concatenar, mas temos outras, como "f String {variável}", "String" + Variável. Entre outras.
