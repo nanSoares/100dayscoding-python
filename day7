@@ -1,0 +1,49 @@
+#Aqui vemos o aninhamento das estruturas condicionais
+
+game = input("What you favorite cod ? ")
+print()
+
+if game == "bo1":
+    print("bo1 is the classic of cods")
+    gamemode = input("your favorite gamemode is? ")
+    if gamemode == "zombies":
+        print("zombies is the best mode forever!")
+        map = input("Whats your favorite map of zombies in cod bo1? ")
+        if map == "kino der toten":
+            print("in this map i have round 52 records in coop mode")
+        elif map == "five":
+            print("This cool, i lossed much guns for doctor")
+        elif map == "dead arcade":
+            print("different map, this powerguns is soo cool!")
+        else:
+            print("i never playing this map")
+    elif gamemode == "campaign":
+        print("oh, this good!")
+    elif gamemode == "multiplayer":
+        print(gamemode, "in the bo1 is soo good!")
+    else:
+        print("I never playing this mode")
+
+elif game == "bo2":
+    print("bo2 is the best of cods")
+    gamemode = input("what your favorite gamemode? ")
+    if gamemode == "zombies":
+      print("All people needs to play this gamemode")
+      map = input("What this favorite map of zombies in the cod? ")
+      if map == "tranzit":
+        print("one of the bests maps for zombies")
+      elif map == "origins":
+        print("the staffs is incredible!")
+      elif map == "buried":
+        print("the witchers soo strong")
+      else:
+        print("I never playing this map")
+    elif gamemode == "multiplayer":
+        print("ooh, nostalgic multiplayer of cod bo2")
+    elif gamemode == "campaign":
+        print("this campaign its ok")
+    else:
+        print("I never playing this mode")
+
+
+Considerações Finais: Deve se prestar muita atenção no recúo dos IFs para funcionar corretamente.
