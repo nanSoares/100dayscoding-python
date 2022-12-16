@@ -1,0 +1,36 @@
+#Colorindo a saída
+#print("\033[txtcolorm") <-- Sintáxe
+
+
+ #Color e Value
+'''Default	0
+   Black	30 
+   Red	31
+   Green	32
+   Yellow	33
+   Blue	34  
+   Purple	35
+   Cyan	36
+   White	37'''
+
+print('''Welcome to your adventure simulator
+I am going to ask you a bunch of 
+questions and then create an epic
+story with you as the star!''')
+print()
+
+name = input(str('What is your name? - '))
+enemy = input(str("What is your worst enemy's? - "))
+superpower = input(str('What is your superpower? - '))
+country = input(str('Where country do you alive? - '))
+food = input(str('What is your favorite food? - '))
+color = input(str('What is your favorite color? - '))
+print()
+
+print(f'''\033[36mHello Mr{name} Your ability to {superpower} and your favorite color {color}, will make sure you never have \033[37mto look at {enemy} again. 
+Go eat {food} as you walk down the streets of {country} and use {superpower} for good and not evil!''')
+
+
+Considerações Finais: Podemos colorir de forma padrão pelo python com a seguinte sintáxe --> \033[NúmeroDaCorm
+                                                                                             \033[33m
+Temos tambem codigos como o TermColor que tambem ajuda a colorir a saída do programa, além de outras formatações específicas.
