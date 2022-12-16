@@ -1,0 +1,33 @@
+#calculando quantos segundos, minutos e horas têm em um ano
+
+
+seconds = 60
+minutes = 60
+hour = 24
+year = 365
+yearLeap = 366
+
+yearNow = int(input("Input year for calculate seconds: "))
+
+if yearNow % 4 == 0:
+ secondsYear = seconds * minutes * hour * yearLeap
+ print(f"{secondsYear} Seconds for year {yearNow}")
+ hourYear = secondsYear / 60
+ print(f"{hourYear} hour's for year {yearNow}")
+ minutesYear = hourYear / 60
+ print(f"{minutesYear} Minutes for year {yearNow}")
+else:
+ secondsYear = seconds * minutes * hour * year
+ print(f"{secondsYear} Segundos for year {yearNow}")
+ hourYear = secondsYear / 60
+ print(f"{hourYear} Minutes for year {yearNow}")
+ minutesYear = hourYear / 60
+ print(f"{minutesYear} Minutes for year {yearNow}")
+
+
+Considerações Finais: Para descobrir o tanto de segundos em um ano fizemos a quantidade de segundos que tem um minuto * a quantidade de minutos que tem uma hora * a 
+quantidade de horas que tem um dia * a quantidade de dias que tem um ano. Caso o ano seja bissexto, são 366 dias.
+
+Para calcular quantas horas tem um ano bastou dividir a quantidade de segundos por 60.
+
+O mesmo para calcular os minutos, bastou dividir a quantidade de horas por 60.
