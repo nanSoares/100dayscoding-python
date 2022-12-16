@@ -1,0 +1,21 @@
+#Uso do elif
+
+username = "nantdi"
+password = "tdi@123"
+
+print("Welcome the website! Place your username and your password to enter")
+print()
+
+user = input(str("Username: "))
+passw = input(str("Password: "))
+print()
+
+if user == username and passw == password:
+  print("Login Sucess")
+elif user == username and passw != password:
+  print("Incorrect Password, Please Try Again.")
+else:
+  print("User not found")
+  
+  
+Considerações Finais: elif é um "SENAO SE", se ele nao atender o primeiro if, ele testa outra condição, se True ele entra no bloco do código.
