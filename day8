@@ -1,0 +1,40 @@
+#Utilizando as skills aprendidas anteriormente: outuput, input, concatenation, print color, if statements, nested if statements
+
+print("Welcome to program! I will guide you through your week!")
+name = input("What's your name? ")
+day = input("Today is? ")
+food = input("You favorite food is: ")
+sport = input("Which sport you practice? ")
+work = input("What do you work on? ")
+school = input("Do you study? Y/N")
+
+if day == "monday":
+  print(f"\033[031m {name} Hello, you will see a schedule of day")
+  print(f"at {day} you eat your favorite food, {food}")
+  if school == "Y":
+    print("going to school at 13:00PM, after job")
+  elif school == "N":
+    print("oh, its ok! you have a free time for sleep")
+  else:
+    print()
+  print(f"You practice {sport} at 22:00PM")
+  print(f"But remember for you job, {work}, at 6:00AM until 12:00PM")
+
+elif day == "tuesday":
+  print(f"\033[33m{name} Hello, you will see a schedule of day")
+  print(f"at {day} do you not eat {food}, you eat omelet")
+  if school == "Y":
+    print("I understand you go to school, but you need to lack")
+  elif school == "N":
+    print("not study? Good, i need you assist today")
+  else:
+    print()
+  print(f"you do not practice {sport} today, i need your help")
+  print("After you job, go to my home.")
+  print("btw... what do you work for anyway?")
+  print(work)
+else:
+  print("constructing day, wait...")
+  
+  
+  Considerações Finais: Utilizamos todas as skills aprendidas anteriormente nesse exemplo
