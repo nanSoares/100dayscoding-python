@@ -1,0 +1,44 @@
+#Adição +
+#subtraction -
+#multiplication *
+#division /
+#raiz **
+#resto da divisão % 
+#divisor //
+
+
+adding = 4+3
+print(adding)
+
+subtraction = 8-2
+print(subtraction)
+
+multiplication = 4*2
+print(multiplication)
+
+division = 20/2
+print(division)
+
+squared = 5**5
+print(squared)
+
+modulo = 3 % 2
+print(modulo)
+
+divisor = 12//2
+print(divisor)
+
+
+#calculating the tip
+
+myBill = float(input("What was the bill?: "))
+numberOfPeople = int(input("How many people?: "))
+gratuity = int(input("What's gratuity in % you give: "))
+answer = myBill / numberOfPeople
+answer = answer + ((gratuity * answer)/100)
+answer = round(answer, 1)
+print("You all owe", answer)
+
+
+Considerações Finais: Operadores básicos, e alguns a mais como resto da divisão (%) que é o resto da primeira divisão de um número por outro, temos tambem a raiz,
+de um número elevado a outro (**), temos tambem o divisor (//) que é o número exato ou para menos, da divisão.
