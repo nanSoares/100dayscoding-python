@@ -40,5 +40,6 @@ answer = round(answer, 1)
 print("You all owe", answer)
 
 
+
 Considerações Finais: Operadores básicos, e alguns a mais como resto da divisão (%) que é o resto da primeira divisão de um número por outro, temos tambem a raiz,
 de um número elevado a outro (**), temos tambem o divisor (//) que é o número exato ou para menos, da divisão.
