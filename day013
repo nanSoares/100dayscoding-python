@@ -1,0 +1,39 @@
+#programa para calcular quantos % vale a nota que o aluno tirou, e se ele foi reprovado
+
+test = input("What's the name of test? ")
+score = int(input("What is a the maximum score you can receive? "))
+received = float(input("What score did you get? "))
+status = False
+
+if test != "" and received <= score:
+  percent = ((received * 100) / score)
+  percent = round(percent, 2)
+  if percent < 50:
+   print(f"\033[31myour score are {received} equivalent to {percent}%")
+   print("You need to improve, you failed")
+  elif percent >= 50 and percent < 60 :
+   print(f"\033[33mYou passed on the test {test}, almost")
+   status = True
+  elif percent >=60 and percent < 70 :
+   print("\033[35mGood job! have a great score")
+   status = True
+  elif percent >=70 and percent < 80 :
+   print(f"\033[36mThis score {received} is nice. Almost there in the maximum score")
+   status = True
+  elif percent >=80 and percent < 90:
+   print("\033[34mOMGG!! almost the maximum score! Great!")
+   status = True
+  elif percent >= 90 and percent < 100:
+   print("\033[32mNice dude!! You hit one of the highest notes!")
+   status = True
+  elif percent == 100:
+   print(f"\033[37mExcellent! You have a maximum score {score}")
+   status = True
+
+if status:
+  if percent == 100:
+    print(f"\033[36mYou are expert in {test}")
+  else:
+    print("You aproved! Congratulations!!!")
+else:
+  print("You not aproved, retake the test now")
