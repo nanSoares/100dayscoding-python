@@ -30,10 +30,16 @@ if test != "" and received <= score:
    print(f"\033[37mExcellent! You have a maximum score {score}")
    status = True
 
-if status:
-  if percent == 100:
-    print(f"\033[36mYou are expert in {test}")
+if received <= score:
+  if test != "":
+    if status:
+      if percent == 100:
+        print(f"\033[36mYou are expert in {test}")
+      else:
+        print("You aproved! Congratulations!!!")
+    else:
+      print("You not aproved, retake the test now")
   else:
-    print("You aproved! Congratulations!!!")
+    print("Write the name of test to calculate score, please")
 else:
-  print("You not aproved, retake the test now")
+  print("Did you get a grade higher than the maximum grade? What!?")
