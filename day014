@@ -1,0 +1,60 @@
+#Pedra, Papel, Tesoura JOGO
+
+import getpass
+
+def player1():
+  player1 = getpass.getpass("Rock(R), Paper(P) or Scissor(S)? ")[0]
+  return player1
+def player2():
+  player2 = getpass.getpass("Rock(R), Paper(P) or Scissor(S)? ")[0]
+  return player2
+def quest():
+  quest = input("Restart the game? (Y/N)")[0]
+  return quest
+
+again = True
+
+while again:
+  name1 = input("Name of player 1: ")
+  name2 = input("Name of player 2: ")
+  playerone = player1()
+  playertwo = player2()
+  print(f"{name1} chose {playerone}, {name2} chose {playertwo}")
+  print()
+  if playerone != "R" and playerone != "P" and playerone != "S" and playertwo != "R" and playertwo != "P" and playertwo != "S":
+    print("Invalid option of player 1 and player 2")
+    break;
+  elif playerone != "R" and playerone != "P" and playerone != "S":
+    print("Invalid option of player 1")
+    break;
+  elif playertwo != "R" and playertwo != "P" and playertwo != "S":
+    print("Invalid option of player 2")
+    break;
+    
+  if playerone == playertwo:
+    print("Tie")
+  else:
+    if playerone == "R" and playertwo == "P":
+      print(f"Player {name2} win")
+    if playerone == "R" and playertwo == "S":
+      print(f"Player {name1} win")
+    if playerone == "P" and playertwo == "R":
+      print(f"Player {name1} win")
+    if playerone == "P" and playertwo == "S":
+      print(f"player {name2} win")
+    if playerone == "S" and playertwo == "P":
+      print(f"player {name1} win")
+    if playerone == "S" and playertwo == "R":
+      print(f"player {name2} win")
+  question = quest()
+  if question == "Y":
+    continue;
+  elif question == "N":
+    print("Thank you!")
+    break;
+  else:
+    print("Invalid option")
+    break;
+    
+    Considerações Finais = Foi utilizado o getpass para esconder a opção selecionada pelo usuário. Utilizei funcões apenas para fixar aprendimentos passados, não foi 
+    visto funcões por aqui ainda.
