@@ -1,0 +1,17 @@
+#Uso do exit na estrutura while para sair do loop
+
+print("---Left or Right---")
+while True:
+  direction = input("Left or Right? ")
+  if direction == "left":
+    print("You're death!")
+    break
+  elif direction == "right":
+    print("Good job! choised correctly direction")
+    exit()
+  else:
+    print("What? ")
+print("Run again for new attempt")
+
+
+Considerações Finais: o exit() pode ser usado para sair do programa sem a utilização do break
