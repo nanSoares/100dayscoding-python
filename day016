@@ -1,0 +1,20 @@
+#Challenge adivinhe a letra da música , 3 tentativas
+
+attempt = 3
+print("You have three attempts to hit")
+while True:
+  print()
+  print('''Oh girl i like you, I do
+  I wanna be your ______, go shoppin' 
+  in the benz''')
+  print()
+  word = input("What this word? ")
+  if word == "friend":
+    print("Correctly!")
+    break
+  else:
+    attempt -= 1
+    print(f"Incorrect word. You have {attempt} attempts")
+    print("-----------------")
+  if attempt == 0:
+    break
