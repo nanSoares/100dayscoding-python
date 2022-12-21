@@ -1,0 +1,22 @@
+#Acerte o número
+
+n1 = 1000
+cont = 0
+while True:
+  cont += 1
+  ask = int(input("Guess the number: "))
+  if ask <= -1:
+    print("Not accepted negative numbers")
+    break
+  elif ask <= 500:
+    print("Too low")
+  elif ask >= 1500:
+    print("Too high")
+  elif ask == 1000:
+    print("Correct number")
+    print(f"You're right in {cont} attempts")
+    break
+  else:
+    print("Very close")
+    
+    
