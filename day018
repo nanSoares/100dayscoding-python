@@ -12,7 +12,7 @@ while True:
     print("Too low")
   elif ask >= 1500:
     print("Too high")
-  elif ask == 1000:
+  elif ask == n1:
     print("Correct number")
     print(f"You're right in {cont} attempts")
     break
