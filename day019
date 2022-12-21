@@ -1,0 +1,7 @@
+#Juros de 5% ao mês para emprestimo
+
+v = 1000
+pay = 0.05
+for counter in range(10):
+  v += (v*pay)
+  print("Year", counter+1, "is", round(v,2))
