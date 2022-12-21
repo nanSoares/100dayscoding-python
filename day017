@@ -14,4 +14,5 @@ while True:
 print("Run again for new attempt")
 
 
-Considerações Finais: o exit() pode ser usado para sair do programa sem a utilização do break
+Considerações Finais: o exit() pode ser usado para sair do programa sem a utilização do break, quando utilizado o exit, ele para todo o programa, até mesmo o código
+que está fora do loop
