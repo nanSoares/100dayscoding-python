@@ -1,0 +1,9 @@
+#Utilização do for com range
+
+
+for i in range(200, 300, 20):
+  print(i)
+  
+
+Considerações finais: o range funciona - (Número inicial, até quanto, de quanto em quanto) *Lembrando que o padrão é incrementar sempre +1, se quiser pode passar apenas
+os dois primeiros argumentos. O FOR é utilizado quando você sabe o número de vezes que precisa repetir, o While é quando você não sabe o número exato de repetições.
