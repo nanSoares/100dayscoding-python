@@ -1,0 +1,23 @@
+#Jogo da tabuada
+
+number = int(input("Choice number for table multiplication: "))
+cont = 0
+cont1 = 0
+
+for i in range(1, 11):
+  result = int(input(f"{number} x {i} = "))
+  n = number * i
+  if result == n:
+    print("Correct")
+    cont += 1
+    print()
+  else:
+    cont1 += 1
+    print(f"Incorrect, is {n}")
+    print()
+    
+print()
+print(f"Corrects: {cont}")
+print(f"Incorrects: {cont1}")
+if cont == 10:
+  print("Perfect! You're Genius")
