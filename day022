@@ -1,0 +1,24 @@
+#Jogo número aleatório
+
+
+import random
+
+cont = 0
+while True:
+  cont += 1
+  n = random.randint(1, 15)
+  print(n)
+  user = int(input("Guess a number: "))
+  if user == n:
+    print("Congratulations")
+    break
+  elif user > n:
+    print("Too high")
+  elif user < n:
+    print("Too low")
+
+print(f"Tentatives: {cont}")
+
+
+Considerações Finais: Vimos como importar codigos de fora utilizando bibliotecas do python. Para utilizar funcões da biblioteca random, utilizamos o nome da biblioteca
+(random).(nome da função) e passamos os argumentos que são necessários, no caso random.randint(1,15), um número inteiro randomico de 1 até 15.
