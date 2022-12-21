@@ -1,0 +1,13 @@
+#def (função) ou (subrotina) pode ser chamada para não ter que ficar reescrevendo o código, essa subrotina pode conter ou não argumentos para funcionar. 
+Sintáxe --> def (nome da subrotina) (parâmetros):
+
+
+def login():
+  usr = str(input("User: "))
+  psswd = input("Password: ")
+  if usr == "nan4" and psswd == "soares52":
+    print("Login sucess")
+    print("Please wait...")
+  else:
+    print("Login Failed. User or Password incorrect")
+login()
