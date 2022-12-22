@@ -1,0 +1,55 @@
+#Reprodutor de música com a biblioteca audio do replit
+
+
+from replit import audio
+import os, time
+
+def menu():
+  while True:
+    print("🎵 Music Player ")
+    print()
+    print("Press 1 to play ")
+    print("Press 2 to exit ")
+    print()
+    usr = int(input())
+    if usr == 1:
+      play()
+    elif usr == 2:
+      exit()
+    else:
+      print("Invalid command! Try again.")
+      print()
+      continue
+  
+def play():  
+  source = audio.play_file('audio.wav')
+  source.paused = False
+  while True:
+    os.system("clear")
+    
+    print("🎵 Music Player ")
+    print()
+    print("press 1 for pause")
+    print("press 2 for play")
+    print()
+    print("Press anything number to see the menu again.")
+    print()
+    usr = int(input())
+    if usr == 1:
+      source.paused = True
+      continue
+    elif usr == 2:
+      source.paused = False
+      continue
+    else:
+      time.sleep(1)
+      os.system("clear")
+      source.paused = True
+      menu()
+
+while True:
+  menu()
+  
+  
+  Considerações Finais: as bibliotecas os e time foram utilizadas respectivamente : limpar o terminal, tempo de espera para ser limpado.
+  
