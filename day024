@@ -1,0 +1,24 @@
+#Game dado infinito, o usuário deve escolher quantos lados terá o dado e será "girado" o dado
+
+
+import random
+
+print("Infinite Dice 🎲")
+print()
+
+def rollDice(sides):
+  while True:
+    n = random.randint(1, sides)
+    print(f"You rolled {n}")
+    a = input("Run again? yes/no -> ")
+    if a == "yes":
+      continue
+    elif a == "no":
+      print("Thank you")
+      break
+    else:
+      print("Invalid option, exiting the programm...")
+      break
+
+dice = int(input("How many sides of dice? "))
+rollDice(dice)
