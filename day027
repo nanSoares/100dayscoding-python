@@ -1,0 +1,53 @@
+#Gerar HP e Força de um Personagem
+
+
+import random, os, time
+
+def health():
+  a = random.randint(1,6)
+  b = random.randint(1,12)
+
+  hp = ((a * b) / 2) + 10
+
+  return hp
+
+def strength():
+  a = random.randint(1,6)
+  b = random.randint(1,8)
+
+  str = ((a * b) / 2) + 12
+
+  return str
+
+while True:
+  print("-- Character Builder --")
+
+  print("Name your Legend:")
+  name = str(input(""))
+
+  print("Character Type (Human, Elf, Wiard, Orc):")
+  type = str(input(""))
+
+  if type != "human" and type != "elf" and type != "wiard" and type != "orc":
+    print("Invalid Type... Reinitializing")
+    time.sleep(4)
+    os.system("clear")
+    continue
+  else:
+    name
+    print(f"Health: {health()}")
+    print(f"Strength {strength()}")
+
+    print("May your name go down in Legend...")
+    time.sleep(5)
+    os.system("clear")
+    new = str(input("Create new person? Y/N - "))[0]
+    if new == "y":
+      os.system("clear")
+      continue
+    elif new == "n":
+      print("Thank you for play")
+      break
+    else:
+      print("Invalid command, Run again")
+      break
