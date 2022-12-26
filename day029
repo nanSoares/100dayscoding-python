@@ -1,0 +1,61 @@
+#Secret One: end. Por padrão, quando damos um print o computador mostra na tela e desce uma linha. Com o comando end= no final do print podemos adicionar funções para que continue na mesma linha e adicione um espaço por exemplo, ou espaço e uma vírgula. podemos passar tambem uma quebra de linha \n, para mostrar em tabela \t, para mostrar na vertical \v
+
+
+for i in range(0, 100):
+  print(i, end=" ")
+
+for i in range(0, 100):
+  print(i, end=", ")
+
+#new line
+for i in range(0, 100):
+  print(i, end="\n")
+
+#tab indent
+for i in range(0, 100):
+  print(i, end="\t")
+
+#vertical tab
+for i in range(0, 100):
+  print(i, end="\v")
+
+
+#Secret Two: Sep. O sep (short for separator) é bom para controlar separação de textos e emojis
+
+print("If you put ", "\033[33m", "nothing as the ", "\033[35m", "end character ", "\033[32m", "then you don't ", "\033[0m", "get odd gaps ", sep="")
+
+#Secret Three: Cursor: Cor do cursor branco: \033{?25l, para voltar ao normal \033{?25h
+
+
+import os, time
+print('\033{?25h', end="")
+for i in range(1, 101):
+  print(i)
+  time.sleep(0.2)
+  os.system("clear")
+
+def colorText(word,color):
+  if color == "red":
+    print("\033[31m", word, sep="", end="")
+  elif color == "blue":
+    print("\033[34m", word, sep="", end="")
+  elif color == "green":
+    print("\033[32m", word, sep="", end="")
+  elif color == "cyan":
+    print("\033[36m", word, sep="", end="")
+  else:
+    print("\033[0m", word, sep="", end="")
+    
+colorText("Super Subroutine", "red")
+print("\n")
+colorText("With my ", "red")
+colorText("new program ", "green")
+colorText('I can just call blue ("and") ', "blue")
+colorText("and ", "red")
+colorText("that word will appear in the collor I set it to", "red")
+print("\n")
+colorText("With no ", "red")
+colorText("weird gaps", "cyan")
+print("\n")
+colorText("Epic. ", "red")
+colorText("OK", "Def")
