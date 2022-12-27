@@ -1,0 +1,206 @@
+import random, os, time
+
+def round1(name1, name2, hp1, hp2):
+  print("The battle begins!")
+  p1 = rollDice()
+  p2 = rollDice()
+  d = damage(strength1, strength2)
+  if p1 >= p2:
+    print(f"{name1} wins the first blow")
+    print(f"{name2} takes a hit, with {d} damage")
+    hp2 -= d
+    print()
+    print(f"{name1}")
+    print(f"HEALTH: {hp1}")
+    print()
+    print(f"{name2}")
+    print(f"HEALTH: {hp2}")
+  else:
+    print(f"{name2} wins the first blow")
+    print(f"{name1} takes a hit, with {d} damage")
+    hp1 -= d
+    print()
+    print(f"{name1}")
+    print(f"HEALTH: {hp1}")
+    print()
+    print(f"{name2}")
+    print(f"HEALTH: {hp2}")
+  return hp1, hp2
+
+def round2(name1, name2, hp1, hp2):
+  print("The battle continues!")
+  p1 = rollDice()
+  p2 = rollDice()
+  d = damage(strength1, strength2)
+  if p1 >= p2:
+    print(f"{name2} takes a hit, with {d} damage")
+    hp2 -= d
+    print()
+    print(f"{name1}")
+    print(f"HEALTH: {hp1}")
+    print()
+    print(f"{name2}")
+    print(f"HEALTH: {hp2}")
+  else:
+    print(f"{name1} takes a hit, with {d} damage")
+    hp1 -= d
+    print()
+    print(f"{name1}")
+    print(f"HEALTH: {hp1}")
+    print()
+    print(f"{name2}")
+    print(f"HEALTH: {hp2}")
+  return hp1, hp2
+
+
+
+
+def round3(name1, name2, hp1, hp2):
+  print("The battle continues!")
+  p1 = rollDice()
+  p2 = rollDice()
+  d = damage(strength1, strength2)
+  if p1 >= p2:
+    print(f"{name2} takes a hit, with {d} damage")
+    hp2 -= d
+    print()
+    print(f"{name1}")
+    print(f"HEALTH: {hp1}")
+    print()
+    print(f"{name2}")
+    print(f"HEALTH: {hp2}")
+  else:
+    print(f"{name1} takes a hit, with {d} damage")
+    hp1 -= d
+    print()
+    print(f"{name1}")
+    print(f"HEALTH: {hp1}")
+    print()
+    print(f"{name2}")
+    print(f"HEALTH: {hp2}")
+  return hp1, hp2
+  
+def damage(strength1, strength2):
+  if strength1 >= strength2:
+    return strength1 - strength2
+  else:
+    return strength2 - strength1
+
+#Sortear numero 1 ate 6
+def rollDice():
+  result = random.randint(1,6)
+
+  return result
+  
+#Definir hp
+def health():
+  a = random.randint(1,6)
+  b = random.randint(1,12)
+  c = int(((a * b) / 2) + 10)
+  
+  return c
+
+#Definir força
+def strength():
+  a = random.randint(1,6)
+  b = random.randint(1,10)
+  c = int(((a * b) / 2) + 12)
+
+  return c
+
+#Definir criação de personagem
+def createChar():
+  char = str(input("What a name of character? "))
+  
+  return char
+
+#Tipo de personagem
+def typeChar():
+  type = str(input("The character is: Elf - Mage - Soldier? "))
+  if type != "elf" and type != "mage" and type != "soldier":
+    print("Invalid type, please run programm again.")
+    exit()
+  else:
+    return type
+
+  
+while True:
+  print("Welcome The Characters Battle")
+  print()
+  name1 = createChar()
+  strength1 = strength()
+  hp1 = health()
+  type1 = typeChar()
+  print()
+  print(f'''{name1} the {type1}
+  HEALTH: {hp1}
+  STRENGTH: {strength1}''')
+  print()
+  print("Who are they battling?")
+  print()
+  name2= createChar()
+  strength2 = strength()
+  hp2 = health()
+  type2 = typeChar()
+  print()
+  print(f'''{name2} the {type2}
+  HEALTH: {hp2}
+  STRENGTH: {strength2}''')
+  print()
+  time.sleep(4)
+  os.system("clear")
+  round = 1
+  if round == 1:
+    hp1, hp2 = round1(name1, name2, hp1, hp2)
+    round = 2
+    if hp1 < 0:
+          print(f"{name2} destroyed {name1} in 1 round!")
+          time.sleep(7)
+          os.system("clear")
+          break
+    elif hp2 < 0:
+          print(f"{name1} destroyed {name2} in 1 round!")
+          time.sleep(7)
+          os.system("clear")
+          break
+    else:
+      time.sleep(7)
+      os.system("clear")
+    if round == 2:
+      hp1, hp2 = round2(name1, name2, hp1, hp2)
+      round = 3
+      if hp1 < 0:
+          print(f"{name2} destroyed {name1} in 2 rounds!")
+          time.sleep(7)
+          os.system("clear")
+          break
+      elif hp2 < 0:
+          print(f"{name1} destroyed {name2} in 2 rounds!")
+          time.sleep(7)
+          os.system("clear")
+          break
+      else:
+          time.sleep(7)
+          os.system("clear")
+      if hp1 > 0 or hp2 > 0:
+        print("And they're both standing for the next round!")
+        print()
+        hp1, hp2 = round3(name1, name2, hp1, hp2)
+        print()
+        if hp1 < 0:
+          print(f"{name2} destroyed {name1} in 3 rounds!")
+          time.sleep(7)
+          os.system("clear")
+          break
+        elif hp2 < 0:
+          print(f"{name1} destroyed {name2} in 3 rounds!")
+          time.sleep(7)
+          os.system("clear")
+          break
+        else:
+          if hp1 > hp2:
+            print(f"{name1} win because this hp is larger")
+            break
+          else:
+            print(f"{name2} win because this hp is larger" )
+            break    
