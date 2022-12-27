@@ -1,10 +1,16 @@
 import random
-
+-----------------------------------------------------------------
+#Printar um item da lista
 colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Violet"]
 print(f"The first color is {colors[0]}")
-
+-----------------------------------------------------------------
+#Por meio de um número aleatório, mostra um item da lista
 welcome = ["Welcome", "Bem-Vindo", "Bien-venidos", "Bienvenue"]
-
 future = random.randint(0,3)
 
 print(welcome[future])
+
+------------------------------------------------------------------
+#Percorrer lista
+for i in colors:
+  print(i)
