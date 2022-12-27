@@ -1,0 +1,45 @@
+def color(color):
+  if color == "red":
+    return ("\033[31m")
+  elif color == "blue":
+    return ("\033[34m")
+  elif color == "green":
+    return ("\033[32m")
+  elif color == "cyan":
+    return ("\033[36m")
+  else:
+    return ("\033[0m")
+
+
+title = f"{color('red')}={color('blue')}={color('red')} Music App {color('blue')}={color('red')}"
+
+print(f"              {title:^35}")
+print(f"🔥▶️\t{color('cyan')}Radio Gaga")
+print(f"\t{color('green')}Queen")
+
+prev= "PREV"
+next= "NEXT"
+pause= "PAUSE"
+
+print(f"{color('default')}{prev}")
+print(f"\t{color('green')}{next}")
+print(f"\t\t{color('cyan')}{pause}")
+print()
+print()
+print(f"{color('default')}           Welcome to")
+
+title1 = f"{color('blue')}--"
+title2 = f"{color('blue')}ARMBOOK"
+title3 = f"{color('blue')}--"
+text1 = f"{color('cyan')}Definitely not a rip off of"
+text2 = f"{color('cyan')}a certain other social"
+text3 = f"{color('cyan')}networking site."
+honest = f"{color('red')}Honest."
+username = f"{color('default')}Username:"
+password = f"{color('default')}Password:"
+
+print(f"{title1}{title2:^35}{title3}\n")
+print(f"{text1:>50}\n{text2:>50}\n{text3:>50}")
+print(f"{honest:^35}\n")
+input(f"\n{username:^35}")
+input(f"\n{password:^35}")
