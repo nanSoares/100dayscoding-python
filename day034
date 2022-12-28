@@ -1,0 +1,48 @@
+
+import os, time
+
+emails = []
+
+def spamming():
+  cont = 0
+  for i in emails:
+    if cont < 10:
+      os.system("clear")
+      print(f"Dear {emails[cont]}, It has come to our attention that you're missing out on the amazing Replit 100 days of code. We insist you do it right away. If you don't we will pass on your email address to every spammer we've ever encountered and also sign you up to the My Little Pony newsletter, because that's neat. We might just do that anyway.")
+      print()
+      print('''Love and hugs,
+Ian Spammington III''')
+      cont += 1
+      time.sleep(5)
+      os.system("clear")
+      
+def prettyPrint():
+  print()
+  cont = 1
+  for i in emails:
+    print(f"{cont}: {i}")
+    cont += 1
+  print()
+
+while True:
+  print("EMAILS SPAMM")
+  print()
+  usr= input("1. Add Email\n2. Remove Email\n3. View List\n4. Get SPAMMING\n > ")
+  if usr == "1":
+    usr = input("Email > ")
+    os.system("clear")
+    if usr not in emails:
+      emails.append(usr)
+  elif usr == "2":
+    usr = input("Email > ")
+    if usr in emails:
+      emails.remove(usr)
+    else:
+      print(usr, "not in list")
+  elif usr == "3":
+      prettyPrint()
+      time.sleep(5)
+      os.system("clear")
+  elif usr == "4":
+      spamming()
+    
