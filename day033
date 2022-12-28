@@ -1,0 +1,35 @@
+#Adicionar item em uma lista = .append, para remover item da lista = .remove, insert = adiciona o item em um local específico da lista,
+len = para verificar o tamanho da lista, .pop = retira o ultimo item da lista e armazena no pop, pode ser armazenado em uma variável
+
+import time, os
+
+fruits = []
+
+def printFruits():
+  print()
+  for usr in fruits:
+    print("\033[36m",usr, end=", ")
+  print()
+while True:
+  usr = input("\033[31mInsert, view or Delet fruits of list?\n\033[0m ")
+  if usr == "insert":
+    os.system("clear")
+    usr = input("\033[31mInsert Fruit:\033[0m ")
+    fruits.append(usr)
+  elif usr == "view":
+    os.system("clear")
+    if len(fruits) == 0:
+      print("Empty List, Insert fruit for view")
+  elif usr == "delet":
+    usr = input("\033[31mWhat's a fruit your delet?\033[0m ")
+    if len(fruits) != 0:
+      fruits.remove(usr)
+      if len(fruits) == 0:
+        print()
+        print("\033[031mEmpty List\033[0m")
+    else:
+      print(usr, "\033[32mnot in list\033[0m")
+  printFruits()
+  print()
+  time.sleep(5)
+  os.system("clear")
