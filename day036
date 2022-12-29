@@ -1,4 +1,4 @@
-#.lower = deixa a string minuscula, .upper = deixa a string maiúscula, .title = deixa a primeira letra maiúscula das palavras,
+#.lower = deixa a string minuscula, .upper = deixa a string maiúscula, .title = deixa a primeira letra maiúscula das palavras, 
 .strip = tira os espaços desnecessários da string
 
 whatToEat = input("What do you fancy for dinner? ")
@@ -8,3 +8,24 @@ elif whatToEat.lower() == "tacos":
   print("Let's do Taco Tuesday!")
 else: 
   print("Go search the fridge.")
+
+names = []
+
+def printNames():
+  print()
+  for name in names:
+    print(name)
+while True:
+  print("1. Add name\n2. Remove name\n3. View names\n")
+  user = input("> ")
+  if user == "1":
+    first = input("First name: ").strip().capitalize().strip()
+    last = input("Last Name: ").strip().capitalize().strip()
+    name = f"{first} {last}"
+    names.append(name)
+  elif user == "2":
+    user = input("Which name remove?: ")
+    if user in names:
+      names.remove(user)
+  elif user == "3":
+    printNames()
