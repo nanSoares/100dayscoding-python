@@ -1,0 +1,36 @@
+#[Número da posição que vai startar (se estiver sozinho vai printar o numero da posução), Número da posição que vai parar, número de caracteres que vai mover]
+
+#é possível fazer muitas combinações para o print
+
+#O .split() separa as palavras com um espaço entre elas
+
+---------------------------------------------------------------
+myString = "Hello there my friend"
+print(myString[0])
+
+myString = "Hello there my friend"
+print(myString[0:6])
+
+myString = "Hello there my friend"
+print(myString[0:6:2])
+
+myString = "Hello there my friend"
+print(myString[::2])
+
+myString = "Hello there my friend"
+print(myString[::-1])
+---------------------------------------------------------------
+
+#gerador de nome
+
+first = input("First name: ")
+last = input("Last name: ")
+name = f"{first[0:3]}{last[0:3]}".title()
+
+maiden = input("maiden name of your mother: ")
+city = input("Where she born? ")
+name1 = f"{maiden[0:3]}{city[len(city)-3:len(city)]}".title()
+
+star = f"{name} {name1}"
+
+print(star)
