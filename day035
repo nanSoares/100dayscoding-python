@@ -1,0 +1,63 @@
+import os, time
+
+foods = []
+
+def prettyPrint():
+  print()
+  count = 1
+  for i in foods:
+    print(f"{count}: {i}")
+    count += 1
+  print()
+
+while True:
+  print("Welcome to food list")
+  usr = input("1. Add\n2. Remove\n3. View List\n4. Remove All\n5. Edit\n> ")
+  if usr == "1":
+    os.system("clear")
+    usr = input("Food: ").title()
+    if usr not in foods:
+      foods.append(usr)
+      os.system("clear")
+    else:
+      print(f"food {usr} are in the list")
+      time.sleep(3)
+      os.system("clear")
+  elif usr == "2":
+    os.system("clear")
+    usr = input("Remove: ")
+    if usr in foods:
+      q = input("really remove? Y/N: ")
+      if q == "y":
+        print("Ok...")
+        foods.remove(usr)
+        time.sleep(1)
+        os.system("clear")
+    else:
+        print(f"food {usr} not are in list")
+        time.sleep(1)
+        os.system("clear")
+  elif usr == "3":
+    prettyPrint()
+    time.sleep(5)
+    os.system("clear")
+  elif usr == "4":
+    os.system("clear")
+    q = input("Realy remove all? Y/N: ")
+    if q == "y":
+      q = len(foods)
+      print("Ok... Cleaning")
+      foods = []
+      time.sleep(1)
+      os.system("clear")
+  elif usr == "5":
+    os.system("clear")
+    usr = input("What a food you edit?: ").title()
+    us = input("What a new name of food?: ").title()
+    for i in range(0,len(foods)):
+      if foods[i] == usr:
+        foods[i] = us
+        os.system("clear")
+        print("Updating...")
+        time.sleep(3)
+        os.system("clear")
