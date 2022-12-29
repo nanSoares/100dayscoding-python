@@ -1,0 +1,40 @@
+-----------------------------------------------
+myString = "Day 38".lower()
+for letter in myString:
+  if letter == "a":
+    print('\033[33m', end='')
+  elif letter == "d":
+    print('\033[31m', end='')
+  print(letter, end='')
+  print('\033[0m', end='')
+
+vowels = ["a", "e", "i", "o", "u"]
+
+myString = " Will my vowels now be yellow? "
+for letter in myString:
+  if letter.lower() in vowels:
+    print('\033[33m', end='')
+  print(f"{letter}\033[0m", end='')
+print()
+------------------------------------------------
+
+
+def colorSet(letter):
+  if letter == "b":
+    print("\033[34m", end='')
+  elif letter == "g":
+    print("\033[32m", end='')
+  elif letter == "r":
+    print("\033[31m", end='')
+  elif letter == "p":
+    print("\033[35m", end='')
+  elif letter == "y":
+    print("\033[33m", end='')
+  elif letter == " ":
+    print("\033[0m", end='')
+
+ask = input("Write one phrase: ")
+for letter in ask:
+  colorSet(letter.lower())
+  print(letter, end="")
+print()
