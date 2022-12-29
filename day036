@@ -1,0 +1,10 @@
+#.lower = deixa a string minuscula, .upper = deixa a string maiúscula, .title = deixa a primeira letra maiúscula das palavras,
+.strip = tira os espaços desnecessários da string
+
+whatToEat = input("What do you fancy for dinner? ")
+if whatToEat.lower() == "pasta": 
+  print("Get out the pasta maker.")
+elif whatToEat.lower() == "tacos":
+  print("Let's do Taco Tuesday!")
+else: 
+  print("Go search the fridge.")
