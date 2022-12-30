@@ -38,3 +38,7 @@ for letter in ask:
   colorSet(letter.lower())
   print(letter, end="")
 print()
+
+
+
+# As strings são listas disfarçadas
