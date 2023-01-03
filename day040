@@ -1,0 +1,12 @@
+contact = {"name":"", "date":"", "telephone":"" , "email":"", "address":""}
+
+contact["name"] = input("Input your name > ").strip().capitalize()
+contact["date"] = input("Input your date of birth > ").strip()
+contact["telephone"] = input("Input your telephone number > ").strip()
+contact["email"] = input("Input your email > ").strip()
+contact["address"] = input("Input your adress > ").strip()
+
+print(f"Hi {contact['name']}. Our dictionary says that you were born on {contact['date']}, we can call you on
+{contact['telephone']}, email {contact['email']}, or write to {contact['address']}")
+
+#Dicionário contem {chave:valor}, ao inves de procurarmos pelo index como fazemos na lista, podemos procurar pela chave para retornar o valor.
