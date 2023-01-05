@@ -1,0 +1,19 @@
+#Para utilizar loop em dicionário é um pouco diferente, pois se passarmos apenas uma varíavel no loop for, ele irá printar apenas a key, sem o value
+#Podemos usar o .keys() ou .values() para mostrar o que queremos. Já para mostrar os 2 precisamos da funcao .items(), lembrando que temos que ter 2 variaveis para 
+referenciar no loop
+
+------------------------------------------------------------------------------------------------------------------
+website = {"website": "youtube", "url": "youtube.com", "description": "videos and streaming", "rating": "100%"}
+
+for i in website:
+  print(i)
+------------------------------------------------------------------------------------------------------------------
+website = {"name": None, "url": None, "desc": None, "rating": None}
+
+for name in website.keys():
+  website[name] = input(f"{name}: ")
+
+print()
+for name, value in website.items():
+  print(f"{name}:{value}", end="")
+-----------------------------------------------------------------------------------------------------------------
