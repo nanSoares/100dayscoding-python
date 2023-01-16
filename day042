@@ -1,0 +1,19 @@
+#Personagem utilizando dicionário
+
+moke = {"Name": None, "Type": None, "HP": None, "Mage": None}
+
+print("\tGenerator of beast\n")
+
+for i in moke.keys():
+  moke[i] = input(f"Input your beast's {i} > ").title()
+  print()
+
+if moke["Type"] == "Fire":
+  print("\033[31m", end = "")
+elif moke["Type"] == "Ice":
+  print("\033[34m", end = "")
+elif moke["Type"] == "Earth":
+  print("\033[35m", end = "")
+
+for a, b in moke.items():
+  print(f"\t{a}: \t{b}")
